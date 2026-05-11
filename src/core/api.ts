@@ -2,7 +2,7 @@ import type { SearchResult } from './types';
 import { normalizeSlug } from './normalize';
 import { iconCache } from './cache';
 
-const DEFAULT_BASE_URL: string | undefined = process.env.API_URL;
+const DEFAULT_BASE_URL = 'https://iconium-core.vercel.app/api';
 const TIMEOUT_MS = 5000;
 const MAX_RETRIES = 1;
 
@@ -43,11 +43,11 @@ const fetchWithRetry = async (url: string, retries = MAX_RETRIES): Promise<Respo
   throw new ApiError('Request failed');
 };
 
-const getBaseUrl = (): string | undefined => {
+const getBaseUrl = (): string => {
   if (typeof window !== 'undefined' && (window as any).__ICONIUM_CONFIG__?.apiBaseUrl) {
     return (window as any).__ICONIUM_CONFIG__.apiBaseUrl;
   }
-  if (DEFAULT_BASE_URL) return DEFAULT_BASE_URL;
+  return DEFAULT_BASE_URL;
 };
 
 export const fetchIcon = async (slug: string): Promise<string> => {

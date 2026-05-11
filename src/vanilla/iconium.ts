@@ -1,8 +1,6 @@
 import { normalizeSlug } from '../core/normalize';
 import { fetchIcon } from '../core/api';
-
-
-import { iconCache } from '../cache/cache';
+import { iconCache } from '../core/cache';
 interface GetIconOptions {
   color?: string;
   size?: number;

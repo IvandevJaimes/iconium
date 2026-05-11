@@ -8,7 +8,7 @@ import fallbackSvg from '../assets/fallback.svg?raw';
 
 const DEFAULT_SIZE = 24;
 
-type SpanProps = Omit<HTMLAttributes<HTMLSpanElement>, 'ref' | 'name' | 'size' | 'color'>;
+type SpanProps = Omit<HTMLAttributes<HTMLSpanElement>, 'ref' | 'name' | 'size' >;
 
 export const Icon = ({
   name,

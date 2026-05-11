@@ -10,6 +10,7 @@ export default defineConfig({
       formats: ['iife'],
       fileName: () => 'iconium.cdn.js',
     },
+    emptyOutDir: false,
     minify: 'esbuild',
     sourcemap: true,
   },
