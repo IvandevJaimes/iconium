@@ -24,6 +24,11 @@ export const Icon = ({
     let cancelled = false;
     const slug = normalizeSlug(name);
 
+    // Resetear estado previo: si el name anterior falló o tenía contenido,
+    // no puede filtrarse al nuevo icono.
+    setError(false);
+    setSvgContent(null);
+
     const cached = iconCache.get(slug);
     if (cached) {
       let svg = resizeSvg(cached, size);
