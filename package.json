@@ -1,6 +1,6 @@
 {
   "name": "iconium-react",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "React icon library powered by the iconium-core API (5,800+ icons)",
   "type": "module",
   "main": "dist/iconium.cjs",
