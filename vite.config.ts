@@ -6,7 +6,7 @@ import { resolve } from 'path';
 export default defineConfig({
   plugins: [
     react(),
-    dts({ include: ['index.ts'], rollupTypes: true }),
+    dts({ include: ['index.ts', 'src/**/*'], bundleTypes: true }),
   ],
   build: {
     lib: {
